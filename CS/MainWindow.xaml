@@ -1,0 +1,11 @@
+﻿<dx:DXWindow 
+    x:Class="DataAnnotationAttributes.MainWindow" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:Views="clr-namespace:DataAnnotationAttributes.Views"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    Title="Data Annotations Sample. Fluent API" Height="700" Width="1000">
+    <Grid>
+        <Views:MainView Margin="10" />
+    </Grid>
+</dx:DXWindow>

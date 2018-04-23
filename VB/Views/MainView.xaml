@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="DataAnnotationAttributes.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+             xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid" 
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
+             xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+	         xmlns:ViewModel="clr-namespace:DataAnnotationAttributes.ViewModels"
+             xmlns:Model="clr-namespace:DataAnnotationAttributes.Model"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="1000"
+             DataContext="{dxmvvm:ViewModelSource Type=ViewModel:MainViewModel}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <dxg:GridControl ItemsSource="{Binding Contacts}"
+                         CurrentItem="{Binding SelectedContact}"
+                         EnableSmartColumnsGeneration="True" 
+                         AutoGenerateColumns="AddNew">
+            <dxg:GridControl.View>
+                <dxg:TableView AutoWidth="True"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+        <dxc:DXTabControl Grid.Column="1" Padding="0">
+            <dxc:DXTabControl.View>
+                <dxc:TabControlMultiLineView HeaderLocation="Right"/>
+            </dxc:DXTabControl.View>
+            <dxc:DXTabItem Header="DataLayoutControl">
+                <dxlc:LayoutControl Orientation="Vertical" DataContext="{Binding SelectedContact}">
+                    <dxe:ImageEdit EditValue="{Binding Path=Photo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                           Height="200" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock Text="{Binding Path=FullName}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <dxlc:DataLayoutControl CurrentItem="{Binding}" Padding="0"/>
+                </dxlc:LayoutControl>
+            </dxc:DXTabItem>
+            <dxc:DXTabItem Header="PropertyGridControl">
+                <dxlc:LayoutControl Orientation="Vertical" DataContext="{Binding SelectedContact}">
+                    <dxe:ImageEdit EditValue="{Binding Path=Photo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                           Height="200" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <dxpg:PropertyGridControl SelectedObject="{Binding}" Padding="0" ExpandCategoriesWhenSelectedObjectChanged="True"/>
+                </dxlc:LayoutControl>
+            </dxc:DXTabItem>
+        </dxc:DXTabControl>
+    </Grid>
+</UserControl>
