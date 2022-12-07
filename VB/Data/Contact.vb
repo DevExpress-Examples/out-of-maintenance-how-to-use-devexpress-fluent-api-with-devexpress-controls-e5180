@@ -1,6 +1,6 @@
 ﻿Imports Microsoft.VisualBasic
-Imports DevExpress.Xpf.Mvvm
-Imports DevExpress.Xpf.Mvvm.DataAnnotations
+Imports DevExpress.Mvvm
+Imports DevExpress.Mvvm.DataAnnotations
 Imports System.ComponentModel
 Imports System.ComponentModel.DataAnnotations
 Imports System.ComponentModel.DataAnnotations.Schema

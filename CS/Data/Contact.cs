@@ -1,5 +1,5 @@
-﻿using DevExpress.Xpf.Mvvm;
-using DevExpress.Xpf.Mvvm.DataAnnotations;
+﻿using DevExpress.Mvvm;
+using DevExpress.Mvvm.DataAnnotations;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;

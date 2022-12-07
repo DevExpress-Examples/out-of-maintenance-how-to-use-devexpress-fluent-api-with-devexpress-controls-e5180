@@ -1,7 +1,7 @@
 using DataAnnotationAttributes.Model;
-using DevExpress.Xpf.Mvvm;
-using DevExpress.Xpf.Mvvm.DataAnnotations;
-using DevExpress.Xpf.Mvvm.POCO;
+using DevExpress.Mvvm;
+using DevExpress.Mvvm.DataAnnotations;
+using DevExpress.Mvvm.POCO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;

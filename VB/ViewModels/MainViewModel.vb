@@ -1,8 +1,8 @@
 Imports Microsoft.VisualBasic
 Imports DataAnnotationAttributes.Model
-Imports DevExpress.Xpf.Mvvm
-Imports DevExpress.Xpf.Mvvm.DataAnnotations
-Imports DevExpress.Xpf.Mvvm.POCO
+Imports DevExpress.Mvvm
+Imports DevExpress.Mvvm.DataAnnotations
+Imports DevExpress.Mvvm.POCO
 Imports System.Collections
 Imports System.Collections.Generic
 Imports System.Data.Entity
